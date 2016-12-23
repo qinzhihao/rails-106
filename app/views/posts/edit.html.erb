@@ -1,2 +1,11 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<div class="col-md-4 col-md-offset-4">
+  <h2 class="text-center">编辑文章</h2>
+    <%= simple_form_for [@group, @post] do |f| %>
+      <div class="form-group">
+        <%= f.input :content, input_html:{class: "form-control"} %>
+      </div>
+      <div class="form-action">
+        <%= f.submit "Submit", disable_with: "Submitting...", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+</div>
